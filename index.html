@@ -12,5 +12,32 @@
     <div id="main"></div>
 
     <script src="js/app.js"></script>
+    <script>
+        let matrix = [
+            [
+                "#000",
+                "#f0f",
+                "#000",
+                "#002345",
+            ],
+            [
+                "#000",
+                "#fff",
+                "#000",
+            ],
+            [
+                "#000",
+                "#000",
+                "#000",
+            ],
+        ];
+
+        let rdr = new Renderer({
+            el: 'main',
+            pixelSize: 20,
+            matrix: matrix
+        })
+
+    </script>
 </body>
 </html>
