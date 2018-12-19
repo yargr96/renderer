@@ -18,7 +18,7 @@
         this.pixelSize = options.pixelSize || defaults.pixelSize;
         this.matrix = options.matrix || defaults.matrix;
 
-        this.render();
+        this.render()
     }
 
     Renderer.prototype.render = function() {
@@ -28,7 +28,7 @@
                 this.ctx.fillStyle = arr[i][j];
                 this.ctx.fillRect(
                     i * this.pixelSize,
-                    j * this.pixelSize,
+                    this.cnv.height - this.pixelSize - j * this.pixelSize,
                     this.pixelSize,
                     this.pixelSize
                 );
