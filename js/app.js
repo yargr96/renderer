@@ -16,12 +16,24 @@
         this.cnv = canvas;
         this.ctx = canvas.getContext('2d');
         this.pixelSize = options.pixelSize || defaults.pixelSize;
-        this.matrix = options.matrix || defaults.matrix;
+        this._matrix = options.matrix || defaults.matrix;      
 
-        this.render()
+        Object.defineProperty(this, 'matrix', {
+            get: function() {
+                return this._matrix;
+            },
+            set: function(val) {
+                this._matrix = val;
+                this.render();
+            }
+        })
+
+        this.render();
     }
 
     Renderer.prototype.render = function() {
+        this.clear();
+
         let arr = this.matrix;
         for (let i = 0; i < arr.length; i++) {
             for (let j = 0; j < arr[i].length; j++) {
@@ -39,6 +51,10 @@
     Renderer.prototype.render2DArray = function(arr) {
         this.matrix = arr;
         this.render();
+    }
+
+    Renderer.prototype.clear = function() {
+        this.ctx.clearRect(0, 0, this.cnv.width, this.cnv.height);
     }
 
     window.Renderer = Renderer;
