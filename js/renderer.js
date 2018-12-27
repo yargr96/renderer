@@ -39,8 +39,8 @@
             for (let j = 0; j < arr[i].length; j++) {
                 this.ctx.fillStyle = arr[i][j];
                 this.ctx.fillRect(
+                    j * this.pixelSize,
                     i * this.pixelSize,
-                    this.cnv.height - this.pixelSize - j * this.pixelSize,
                     this.pixelSize,
                     this.pixelSize
                 );

@@ -1,0 +1,4 @@
+C:\Users\Artem\renderer\SharpEngine\SharpEngine\SharpEngine\bin\Debug\SharpEngine.exe
+C:\Users\Artem\renderer\SharpEngine\SharpEngine\SharpEngine\bin\Debug\SharpEngine.pdb
+C:\Users\Artem\renderer\SharpEngine\SharpEngine\SharpEngine\obj\x86\Debug\SharpEngine.exe
+C:\Users\Artem\renderer\SharpEngine\SharpEngine\SharpEngine\obj\x86\Debug\SharpEngine.pdb
